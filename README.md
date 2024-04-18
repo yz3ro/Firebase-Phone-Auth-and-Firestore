@@ -2,6 +2,9 @@
 
 FirebaseSignUp is a simple Android application that allows users to register and log in using their phone numbers. This app utilizes some features of the Firebase platform, such as Firebase Authentication and Firestore.
 
+## Medium link for Turks
+[Link]([https://github.com/username/project_name](https://medium.com/@yz3ro/kotlinde-firebase-kullanarak-telefon-numaras%C4%B1-ile-kay%C4%B1t-sistemi-olu%C5%9Fturma-810cd7cc095c))
+
 ## Features
 
 - Users can register and log in with their phone numbers.
