@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="signInToolBar"
+            type="String" />
+        <variable
+            name="fragmentSignIn"
+            type="com.yz3ro.firebasesgnup.ui.fragments.SignInFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.SignUpFragment">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="128dp"
+            app:ccp_defaultNameCode="TR"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SignUpToolBar" />
+
+        <EditText
+            android:id="@+id/TxtNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:ems="10"
+            android:hint="Phone Number"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ccp"
+            app:layout_constraintTop_toBottomOf="@+id/SignUpToolBar" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/SignUpToolBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{signInToolBar}" />
+
+        <Button
+            android:id="@+id/BtnSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:onClick="@{() -> fragmentSignIn.signIn()}"
+            android:text="SignIn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TxtNumber" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="Don't you have an account?"
+            app:layout_constraintEnd_toEndOf="@+id/BtnSignUp"
+            app:layout_constraintStart_toStartOf="@+id/BtnSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/BtnSignUp" />
+
+        <TextView
+            android:id="@+id/txtSignUp"
+            android:layout_width="84dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:text="Sign Up"
+            android:onClick="@{()->fragmentSignIn.signUp()}"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
