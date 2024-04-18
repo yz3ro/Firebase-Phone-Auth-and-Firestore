@@ -29,7 +29,6 @@ FirebaseSignUp is a simple Android application that allows users to register and
 
 ## Contributing
 
-- Contributions of all kinds are welcome. Read the CONTRIBUTING.md file for setting up your development environment and contributing to the project.
 - If you have any issues or suggestions, please open an issue.
 
 ## Screenshots
